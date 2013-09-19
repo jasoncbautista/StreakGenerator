@@ -1,8 +1,5 @@
 import re
 
-def replacer(match):
-        return "ONE"
-
 
 f = open('sampleVC.js')
 lines = f.readlines()
@@ -12,13 +9,13 @@ rawString = "{{prefix_HelloWorld}}   testing this. {{_thiswillNotMatch}} {{prefi
 
 
 
-
-
 cleanLines = []
 
+
+className = "Cool"
 for line in lines:
 
-    result = re.sub(r'\{\{replace_class\}\}', replacer, line)
+    result = re.sub(r'\{\{replace_class\}\}', lambda match:  className, line)
     print result
 
 
