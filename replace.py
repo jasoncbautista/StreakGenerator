@@ -2,14 +2,14 @@ import re
 
 # Our variables that we got passed in:
 templateFileName = 'sampleVC.js'
-className = "Cool"
+className = "C11ool"
 
 
 
 
 def generteJavascriptClassFromTemplate (className, classType):
     # Open up our file
-    templateFileName = "tempalte" + classType + ".js"
+    templateFileName = "template" + classType + ".js"
     tempalteFile = open(templateFileName)
     lines = tempalteFile.readlines()
     tempalteFile.close()
@@ -29,7 +29,7 @@ def generteJavascriptClassFromTemplate (className, classType):
 
 
 generteJavascriptClassFromTemplate(className, "VC")
-generteJavascriptClassFromTemplate(className, "VC")
+generteJavascriptClassFromTemplate(className, "View")
 
 
 # We need to write our:
