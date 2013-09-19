@@ -1,2 +1,4 @@
 testing/
 modulesAndWidgets/modules/boxesButton/boxesButton.css
+modulesAndWidgets/widgets/w/w.css
+modulesAndWidgets/widgets/superTarget/superTarget.css

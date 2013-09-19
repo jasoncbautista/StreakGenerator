@@ -1,8 +1,17 @@
+
+# USage: python thisFile.py w ClassName
 import re
 import os, errno
+import sys
 
 # Our variables that we got passed in:
-className = "BoxesButton"
+
+
+arguments = sys.argv
+
+
+typeOfFile =   "modules" if (arguments[1] == "m") else "widgets"
+className =  arguments[2]
 
 
 # Paths
@@ -12,7 +21,6 @@ htmlPaths = "paths/clientBuildHTMLPaths.txt"
 modulesAndWidgetsPaths = "modulesAndWidgets/"
 
 
-typeOfFile = "modules"
 
 
 pathOfTargetFiles = modulesAndWidgetsPaths + typeOfFile + "/"
