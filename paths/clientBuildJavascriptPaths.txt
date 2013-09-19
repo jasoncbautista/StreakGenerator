@@ -1,0 +1,7 @@
+test3/
+
+modulesAndWidgets/modules/mailMerge/mailMergeVC.js
+modulesAndWidgets/modules/mailMerge/mailMergeView.js
+modulesAndWidgets/modules/boxesButton/boxesButtonVC.js
+modulesAndWidgets/modules/boxesButton/boxesButtonView.js
+modulesAndWidgets/modules/boxesButton/boxesButtonModel.js
