@@ -1,13 +1,13 @@
 import re
+import os, errno
 
 # Our variables that we got passed in:
-templateFileName = 'sampleVC.js'
-className = "C11ool"
+className = "MailMerge"
 
 
 
 
-def generteJavascriptClassFromTemplate (className, classType):
+def generteJavascriptClassFromTemplate (className, lowerCaseClassName, classType):
     # Open up our file
     templateFileName = "template" + classType + ".js"
     tempalteFile = open(templateFileName)
@@ -15,7 +15,8 @@ def generteJavascriptClassFromTemplate (className, classType):
     tempalteFile.close()
 
     # Open a new file
-    targetFileName = className + classType   + ".js"
+
+    targetFileName = lowerCaseClassName +  "/" + lowerCaseClassName + classType   + ".js"
     targetFile = open(targetFileName, 'w')
 
     # Now we generate the lines with our classname
@@ -26,10 +27,27 @@ def generteJavascriptClassFromTemplate (className, classType):
         cleanLines.append(result)
 
 
+# Stackoverflow Helper Functions
+# ------------------------------------------------------------
+def createDirectory(path):
+    try:
+        os.makedirs(path)
+    except OSError as exc: # Python >2.5
+        if exc.errno == errno.EEXIST and os.path.isdir(path):
+            pass
+        else: raise
+
+downcaseFirstLetter = lambda s: s[:1].lower() + s[1:] if s else ''
+
+# ------------------------------------------------------------
 
 
-generteJavascriptClassFromTemplate(className, "VC")
-generteJavascriptClassFromTemplate(className, "View")
+
+lowerCaseClassName = downcaseFirstLetter(className)
+
+createDirectory(lowerCaseClassName)
+generteJavascriptClassFromTemplate(className, lowerCaseClassName, "VC")
+generteJavascriptClassFromTemplate(className, lowerCaseClassName,  "View")
 
 
 # We need to write our:
