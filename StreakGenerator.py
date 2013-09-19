@@ -4,29 +4,37 @@ import re
 import os, errno
 import sys
 
+
+from os.path import expanduser
+homePath = expanduser("~")
+
 # Our variables that we got passed in:
 
 
 arguments = sys.argv
 
-pathToMailFoo = "./"
+pathToMailFoo = homePath + "/MailFoo/"
 
 typeOfFile =   "modules" if (arguments[1] == "m") else "widgets"
 className =  arguments[2]
 
 
-basePathToPathsFiles = pathToMailFoo + "paths/"
+basePathToPathsFiles = pathToMailFoo + "builders/buildSettings/"
 # Paths
 jsPaths = basePathToPathsFiles + "clientBuildJavascriptPaths.txt"
 cssPaths =basePathToPathsFiles +  "clientBuildCSSPaths.txt"
 htmlPaths = basePathToPathsFiles + "clientBuildHTMLPaths.txt"
 
-modulesAndWidgetsPaths = pathToMailFoo + "modulesAndWidgets/"
 
+modulesAndWidgetsRelativePath = "extensions/common/js/"
+modulesAndWidgetsPaths = pathToMailFoo +  modulesAndWidgetsRelativePath
 
 
 
 pathOfTargetFiles = modulesAndWidgetsPaths + typeOfFile + "/"
+# This is used to inject path into .txt paths files
+relativePathOfTargetFiles = modulesAndWidgetsRelativePath + typeOfFile + "/"
+
 
 # 'builders/buildSettings/clientBuildJavascriptPaths.txt'
 
@@ -52,7 +60,8 @@ def generteJavascriptClassFromTemplate (className, lowerCaseClassName, classType
         cleanLines.append(result)
     targetFile.close()
 
-    addPathToFile(jsPaths, pathToTargetFile)
+    relativePathToTarget =  relativePathOfTargetFiles + targetFileName
+    addPathToFile(jsPaths, relativePathToTarget)
 
 # Stackoverflow Helper Functions
 # ------------------------------------------------------------
@@ -92,10 +101,12 @@ def generteCSSClassFromTemplate (className, lowerCaseClassName):
     targetFileName = lowerCaseClassName +  "/" + lowerCaseClassName + ".css"
     pathToTargetFile = pathOfTargetFiles + targetFileName
     targetFile = open(pathToTargetFile, 'w')
-    targetFile.write("//---")
+    targetFile.write("")
     targetFile.close()
 
-    addPathToFile(cssPaths, pathToTargetFile)
+    relativePathToTarget =  relativePathOfTargetFiles + targetFileName
+
+    addPathToFile(cssPaths, relativePathToTarget)
 
 #
 
@@ -104,10 +115,11 @@ def generteHTMLClassFromTemplate (className, lowerCaseClassName):
     targetFileName = lowerCaseClassName +  "/" + lowerCaseClassName + ".html"
     pathToTargetFile = pathOfTargetFiles + targetFileName
     targetFile = open(pathToTargetFile, 'w')
-    targetFile.write("//---")
+    targetFile.write("")
     targetFile.close()
 
-    addPathToFile(htmlPaths, pathToTargetFile)
+    relativePathToTarget =  relativePathOfTargetFiles + targetFileName
+    addPathToFile(htmlPaths, relativePathToTarget)
 
 # ------------------------------------------------------------
 
