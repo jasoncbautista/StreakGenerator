@@ -1,0 +1,17 @@
+Usage:
+
+    python StreakGenerator.py w ClassNameToUse
+
+
+# This Will Generate a few files in the widget directory:
+## widgets/classNameToUse/classNameToUseVC.js
+## widgets/classNameToUse/classNameToUseView.js
+## widgets/classNameToUse/classNameToUseModel.js
+## widgets/classNameToUse/classNameToUse.css
+## widgets/classNameToUse/classNameToUse.html
+
+# It will also populate the path.txt files for js, html and css with the above
+# files
+
+
+
