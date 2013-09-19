@@ -19,5 +19,5 @@
       ddfkdsjfsdj: null
   });
 
-  BB.Modules.{{replace_class}}Model = {{replace_class}}Model;
+  BB.{{replace_MorW}}.{{replace_class}}Model = {{replace_class}}Model;
 })(Streak);

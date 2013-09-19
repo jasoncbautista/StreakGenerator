@@ -56,6 +56,7 @@ def generteJavascriptClassFromTemplate (className, lowerCaseClassName, classType
     cleanLines = []
     for line in lines:
         result = re.sub(r'\{\{replace_class\}\}', lambda match:  className, line)
+        result = re.sub(r'\{\{replace_MorW\}\}', lambda match:  typeOfFile.capitalize(), result)
         targetFile.write(result);
         cleanLines.append(result)
     targetFile.close()

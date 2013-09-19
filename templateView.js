@@ -24,5 +24,5 @@
       ddfkdsjfsdj: null
   });
 
-  BB.Modules.{{replace_class}}View = {{replace_class}}View;
+  BB.{{replace_MorW}}.{{replace_class}}View = {{replace_class}}View;
 })(Streak);
