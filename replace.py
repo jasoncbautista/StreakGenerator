@@ -1,21 +1,29 @@
 import re
 
-
-f = open('sampleVC.js')
-lines = f.readlines()
-f.close()
-
-rawString = "{{prefix_HelloWorld}}   testing this. {{_thiswillNotMatch}} {{prefix_Okay}}"
-
-
-
-cleanLines = []
-
-
+# Our variables that we got passed in:
+templateFileName = 'sampleVC.js'
 className = "Cool"
-for line in lines:
 
+
+# Open up our file
+tempalteFile = open(templateFileName)
+lines = tempalteFile.readlines()
+tempalteFile.close()
+
+# Open a new file
+targetFileName = className + "VC.js"
+targetFile = open(targetFileName, 'w')
+
+# Now we generate the lines with our classname
+cleanLines = []
+for line in lines:
     result = re.sub(r'\{\{replace_class\}\}', lambda match:  className, line)
-    print result
+    targetFile.write(result);
+    cleanLines.append(result)
+
+
+
+
+
 
 
