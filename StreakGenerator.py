@@ -14,10 +14,12 @@ typeOfFile =   "modules" if (arguments[1] == "m") else "widgets"
 className =  arguments[2]
 
 
+basePathToPathsFiles = "paths/"
 # Paths
-jsPaths = "paths/clientBuildJavascriptPaths.txt"
-cssPaths = "paths/clientBuildCSSPaths.txt"
-htmlPaths = "paths/clientBuildHTMLPaths.txt"
+jsPaths = basePathToPathsFiles + "clientBuildJavascriptPaths.txt"
+cssPaths =basePathToPathsFiles +  "clientBuildCSSPaths.txt"
+htmlPaths = basePathToPathsFiles + "clientBuildHTMLPaths.txt"
+
 modulesAndWidgetsPaths = "modulesAndWidgets/"
 
 

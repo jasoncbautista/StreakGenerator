@@ -11,3 +11,6 @@ modulesAndWidgets/widgets/w/wModel.js
 modulesAndWidgets/widgets/superTarget/superTargetVC.js
 modulesAndWidgets/widgets/superTarget/superTargetView.js
 modulesAndWidgets/widgets/superTarget/superTargetModel.js
+modulesAndWidgets/modules/ssssFFFfff/ssssFFFfffVC.js
+modulesAndWidgets/modules/ssssFFFfff/ssssFFFfffView.js
+modulesAndWidgets/modules/ssssFFFfff/ssssFFFfffModel.js
