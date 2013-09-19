@@ -5,6 +5,12 @@ import os, errno
 className = "MailMerge"
 
 
+# Paths
+jsPaths = "paths/clientBuildJavascriptPaths.txt"
+cssPaths = "paths/clientBuildCSSPaths.txt"
+htmlPaths = "paths/clientBuildHTMLPaths.txt"
+
+# 'builders/buildSettings/clientBuildJavascriptPaths.txt'
 
 
 def generteJavascriptClassFromTemplate (className, lowerCaseClassName, classType):
@@ -40,8 +46,6 @@ def createDirectory(path):
 downcaseFirstLetter = lambda s: s[:1].lower() + s[1:] if s else ''
 
 # ------------------------------------------------------------
-
-
 
 lowerCaseClassName = downcaseFirstLetter(className)
 
