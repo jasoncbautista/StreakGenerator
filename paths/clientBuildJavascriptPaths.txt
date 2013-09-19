@@ -14,3 +14,6 @@ modulesAndWidgets/widgets/superTarget/superTargetModel.js
 modulesAndWidgets/modules/ssssFFFfff/ssssFFFfffVC.js
 modulesAndWidgets/modules/ssssFFFfff/ssssFFFfffView.js
 modulesAndWidgets/modules/ssssFFFfff/ssssFFFfffModel.js
+./modulesAndWidgets/modules/oneTwoOne/oneTwoOneVC.js
+./modulesAndWidgets/modules/oneTwoOne/oneTwoOneView.js
+./modulesAndWidgets/modules/oneTwoOne/oneTwoOneModel.js

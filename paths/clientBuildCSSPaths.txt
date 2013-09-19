@@ -3,3 +3,4 @@ modulesAndWidgets/modules/boxesButton/boxesButton.css
 modulesAndWidgets/widgets/w/w.css
 modulesAndWidgets/widgets/superTarget/superTarget.css
 modulesAndWidgets/modules/ssssFFFfff/ssssFFFfff.css
+./modulesAndWidgets/modules/oneTwoOne/oneTwoOne.css

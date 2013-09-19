@@ -9,18 +9,19 @@ import sys
 
 arguments = sys.argv
 
+pathToMailFoo = "./"
 
 typeOfFile =   "modules" if (arguments[1] == "m") else "widgets"
 className =  arguments[2]
 
 
-basePathToPathsFiles = "paths/"
+basePathToPathsFiles = pathToMailFoo + "paths/"
 # Paths
 jsPaths = basePathToPathsFiles + "clientBuildJavascriptPaths.txt"
 cssPaths =basePathToPathsFiles +  "clientBuildCSSPaths.txt"
 htmlPaths = basePathToPathsFiles + "clientBuildHTMLPaths.txt"
 
-modulesAndWidgetsPaths = "modulesAndWidgets/"
+modulesAndWidgetsPaths = pathToMailFoo + "modulesAndWidgets/"
 
 
 
